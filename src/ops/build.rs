@@ -469,6 +469,13 @@ fn build_manifest(
             .application_attributes
             .as_ref()
             .map_or(String::new(), |a| a.replace("\n", "\n            "))
+        target_config
+            .package_icon
+            .as_ref()
+            .map_or(String::new(), |_| format!(
+                r#"
+            android:banner="@drawable/banner""#
+            )),
     );
 
     // Build activity attributes
