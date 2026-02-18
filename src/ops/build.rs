@@ -468,7 +468,7 @@ fn build_manifest(
         target_config
             .application_attributes
             .as_ref()
-            .map_or(String::new(), |a| a.replace("\n", "\n            "))
+            .map_or(String::new(), |a| a.replace("\n", "\n            ")),
         target_config
             .package_icon
             .as_ref()
