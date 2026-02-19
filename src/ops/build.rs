@@ -449,7 +449,7 @@ fn build_manifest(
     // Building application attributes
     let application_attrs = format!(
         r#"
-            android:hasCode="true" android:label="{0}"{1}{2}{3}"#,
+            android:hasCode="true" android:label="{0}"{1}{2}{3}{4}"#,
         target_config.package_label,
         target_config
             .package_icon
